@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from './Container'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
@@ -39,7 +38,7 @@ const Contact = () => {
                 </div>
                 <div className="w-full">
                     <div className=" h-[30rem] w-full bg-gray-400 block object-cover">
-                        <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Google, 8th Avenue, New York, NY, USA&t=&z=14&ie=UTF8&iwloc=B&output=embed" frameborder="0"></iframe>
+                        <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Google, 8th Avenue, New York, NY, USA&t=&z=14&ie=UTF8&iwloc=B&output=embed" ></iframe>
                     </div>
                 </div>
             </div>

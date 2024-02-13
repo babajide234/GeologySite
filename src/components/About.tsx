@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from './Container'
 import { IMG1 } from '../assets'
 

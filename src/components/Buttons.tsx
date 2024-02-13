@@ -7,7 +7,7 @@ interface ButtonsProps {
     variant?: 'primary' | 'secondary' | 'success' | 'danger';
 }
 
-const Buttons: React.FC<ButtonsProps> = ({children, outline, color, variant}) => {
+const Buttons: React.FC<ButtonsProps> = ({children, outline, variant}) => {
     const baseClasses = ' w-full md:w-fit px-5 py-2 focus:outline-none rounded-full';
 
     const getVariantClasses = () => {
