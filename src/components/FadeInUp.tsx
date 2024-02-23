@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 interface FadeInUpProps {
   children: React.ReactElement;
-  reset?: boolean;
   duration?: number;
   easing?: number[];
 }
@@ -12,11 +11,10 @@ interface FadeInUpProps {
 
 const FadeInUp = ({
     children,
-    reset = true,
     duration = 2,
     easing = [0,.48,.12,.98]
   }:FadeInUpProps) => {
-    // const { inView } = useContext(IntersectionContext);
+
     const transition = useMemo(
       () => ({
         duration,
