@@ -36,7 +36,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-5 w-full">
+                    <div className=" md:w-[30rem] flex flex-col gap-5 w-full">
                         <h3 className="">Subscribe For Newsletter</h3>
                         <label htmlFor='emailNewsletter' className=" w-full md:w-[30rem] flex  border focus-within:border-gray-600 border-gray-200 rounded overflow-hidden">
                             <span className="sr-only">email</span>

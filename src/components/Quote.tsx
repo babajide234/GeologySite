@@ -28,7 +28,7 @@ const Quote = () => {
                         </div>
                         <div className=" flex flex-col gap-2">
                             <label htmlFor="" className=" text-sm capitalize font-bold text-gray-400">Message</label>
-                            <textarea name="" id="" cols={30} rows={10} className='border-2 border-gray-200 py-2.5 px-2 outline-none focus:border-green-400'></textarea>
+                            <textarea name="" id="" cols={20} rows={5} className='border-2 border-gray-200 py-2.5 px-2 outline-none focus:border-green-400'></textarea>
                         </div>
                         <div className=" flex flex-col gap-2">
                             <button type="submit" className='w-full py-2.5 bg-black text-white capitalize font-semibold text-lg'>Submit</button>

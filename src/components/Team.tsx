@@ -1,3 +1,4 @@
+import { CEO } from '../assets'
 import Container from './Container'
 
 const Team = () => {
@@ -12,29 +13,15 @@ const Team = () => {
                 </div>
                 <div className=" grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div className="w-full overflow-hidden flex gap-4 flex-col items-center">
-                        <img src="https://placehold.co/100" alt="" className=" w-full object-cover" />
+                        <div className="  overflow-hidden bg-cover w-[30rem] h-[30rem] bg-right " style={{ backgroundImage:`url(${CEO})`}}>
+                        </div>
                         <div className="">
                             <h2 className=" text-lg font-semibold ">John Doe</h2>
                             <h3 className="text-lg  text-gray-400">Geologist</h3>
                         </div>
                         <p className=" text-sm text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci similique.</p>
                     </div>
-                    <div className="w-full overflow-hidden flex gap-4 flex-col items-center">
-                        <img src="https://placehold.co/100" alt="" className=" w-full object-cover" />
-                        <div className="">
-                            <h2 className=" text-lg font-semibold ">John Doe</h2>
-                            <h3 className="text-lg  text-gray-400">Geologist</h3>
-                        </div>
-                        <p className=" text-sm text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci similique.</p>
-                    </div>
-                    <div className="w-full overflow-hidden flex gap-4 flex-col items-center">
-                        <img src="https://placehold.co/100" alt="" className=" w-full object-cover" />
-                        <div className="">
-                            <h2 className=" text-lg font-semibold ">John Doe</h2>
-                            <h3 className="text-lg  text-gray-400">Geologist</h3>
-                        </div>
-                        <p className=" text-sm text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci similique.</p>
-                    </div>
+                    
                 </div>
             </div>
         </Container>

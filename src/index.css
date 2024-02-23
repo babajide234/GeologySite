@@ -13,3 +13,19 @@
       scrollbar-width: none; /* Firefox */
     }
 }
+
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 7px;
+  background: #fafafa;
+  -webkit-border-radius: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6600ff;
+  -webkit-border-radius: 1px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #fff3;
+}

@@ -1,87 +1,100 @@
 import Container from './Container'
-import { 
-    FaIndustry, 
-    FaMicroscope, 
-    FaCode, 
-    FaBriefcase, 
-    FaFlask, 
-    FaGlobe, 
-    FaHandshake, 
-    FaGraduationCap, 
-    FaLeaf, 
-    FaTools } from 'react-icons/fa';
+
+    
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Equipment, Gold, Survey } from '../assets';
 
 const Services = () => {
+    useGSAP(()=>{
+        gsap.registerPlugin(ScrollTrigger) 
+
+        const services = gsap.utils.toArray(".services");
+        const tl = gsap.timeline();
+        
+        tl.from(services, {
+            scrollTrigger:{
+                trigger:"section",
+                toggleActions:'play none none none',
+            },
+            ease: "elastic.out(1,0.8)",
+            scale:0,
+            opacity:0,
+            duration:1,
+            stagger:.8,
+        });
+
+        // gsap.from(".RightToLeft",{
+        //     scrollTrigger:{
+        //         trigger:"section",
+        //         toggleActions:'play none none none',
+        //     },
+        //     x:100,
+        //     opacity:0,
+        //     duration:2
+        // })
+
+        // gsap.from(".leftToRight",{
+        //     scrollTrigger:{
+        //         trigger:"section",
+        //         toggleActions:'play none none none',
+        //     },
+        //     once:true,
+        //     x:-100,
+        //     opacity:0,
+        //     duration:2,
+        // })
+
+        gsap.from(".fadeInPop",{
+            scrollTrigger:{
+                trigger:"section",
+                toggleActions:'play none none none',
+            },
+            once:true,
+            scale:0,
+            opacity:0,
+            duration:1,
+            stagger:.6
+        })
+
+    })
   return (
-    <section className="py-20">
+    <section id='services' className=" py-5 md:py-20">
         <Container>
-            <div id='services' className=" flex flex-col items-center gap-5 md:gap-20">
-                <div className=" text-center flex flex-col gap-5">
-                    <h2 className=" font-bold text-4xl ">Services</h2>
-                    <p className="text-gray-600 text-base">Explore our range of services</p>
+            
+            <div className=" text-center flex items-center py-10 flex-col px-5 md:px-20">
+                <h3 className="text-sm uppercase leading-loose text-gray-400 flex w-fit pb-2 fadeInPop">Services</h3>
+                <h3 className="text-3xl leading-tight font-bold flex w-fit pb-2 mb-5 fadeInPop">Our Services</h3>
+                <p className="text-sm md:text-sm mb-5 text-gray-500 fadeInPop">At BRC Company, we pride ourselves on providing a wide range of services tailored to meet the diverse needs of our clients. From innovative solutions in technology to comprehensive consulting services, we're dedicated to delivering excellence in every aspect of our work. Explore our offerings and discover how we can help you achieve your goals.</p>
+            </div>
+           <div className="">
+                <div className="flex flex-col md:flex-row-reverse items-center justify-center w-full gap-5">
+                    <img src={Gold} alt="" className="w-[30rem] rounded-xl fadeInPop" />
+                    <div className=" w-full md:w-[30rem] leftToRight relative text-center flex justify-center flex-col items-center">
+                        <h3 className="text-sm uppercase leading-loose text-gray-400 flex w-fit pb-2">Gold Mining Investment</h3>
+                        <h3 className="text-3xl leading-tight font-bold flex w-fit pb-2 mb-5">Invest in Gold Mining</h3>
+                        <p className="text-sm md:text-sm mb-5 text-gray-500">Explore investment opportunities in gold mining with BRC Geologist Limited. We provide expert analysis and strategic insights to maximize returns.</p>
+                    </div>
                 </div>
-                <div className=" grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 w-full">
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaIndustry className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Mineral Exploration Projects</h3>
-                        <p className="text-gray-600 text-xs">Investing in mineral exploration projects can yield significant returns if successful in discovering valuable mineral deposits such as gold, silver, copper, or rare earth elements.</p>
+                <div className="flex flex-col md:flex-row items-center justify-center w-full gap-5">
+                    <img src={Equipment} alt="" className="w-[30rem] rounded-xl fadeInPop" />
+                    <div className=" w-full md:w-[30rem] RightToLeft relative text-center flex justify-center flex-col items-center">
+                        <h3 className="text-sm uppercase leading-loose text-gray-400 flex w-fit pb-2">Machine Leasing and Purchase</h3>
+                        <p className="text-sm md:text-sm mb-5 text-gray-500">BRC Geologist Limited offers flexible options for machine leasing and purchase. Get access to top-quality equipment for your mining operations.</p>
+                        <h3 className="text-3xl leading-tight font-bold flex w-fit pb-2 mb-5">Lease or Purchase Machines</h3>
                     </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaMicroscope className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Geotechnical Testing Equipment</h3>
-                        <p className="text-gray-600 text-xs">Investing in advanced geotechnical testing equipment can enhance the company's capabilities in conducting soil and rock testing for construction projects.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaCode className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Technology and Software</h3>
-                        <p className="text-gray-600 text-xs">Investing in specialized geological software and technology can improve efficiency and accuracy in data analysis, interpretation, and visualization.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaBriefcase className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Expansion of Services</h3>
-                        <p className="text-gray-600 text-xs">Investing in expanding the range of services offered by the geology company can open up new revenue streams and market opportunities.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaFlask className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Research and Development</h3>
-                        <p className="text-gray-600 text-xs">Investing in research and development initiatives can drive innovation and help the company stay at the forefront of advancements in geological science and technology.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaGlobe className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">International Expansion</h3>
-                        <p className="text-gray-600 text-xs">Investing in expanding operations internationally can tap into new markets and opportunities for geological consulting services, mineral exploration, or environmental assessments.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaHandshake className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Strategic Partnerships and Acquisitions</h3>
-                        <p className="text-gray-600 text-xs">Investing in strategic partnerships or acquiring complementary businesses can accelerate growth and diversification.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaGraduationCap className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Training and Development</h3>
-                        <p className="text-gray-600 text-xs">Investing in training and development programs for employees can enhance expertise and skillsets.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaLeaf className="w-12 h-12 mb-4" />
-
-                        <h3 className="text-sm font-semibold">Environmental Sustainability Initiatives</h3>
-                        <p className="text-gray-600 text-xs">Investing in environmentally sustainable practices and technologies can enhance the company's reputation and appeal to clients.</p>
-                    </div>
-                    <div className="flex flex-col items-center  text-center gap-5">
-                        <FaTools className="w-12 h-12 mb-4" />
-                        <h3 className="text-sm font-semibold">Infrastructure Investments</h3>
-                        <p className="text-gray-600 text-xs">Investing in upgrading company infrastructure can improve operational efficiency and support growth objectives.</p>
+                </div>
+                <div className="flex flex-col md:flex-row-reverse  items-center justify-center w-full gap-5">
+                    <img src={Survey} alt="" className="w-[30rem] rounded-xl fadeInPop" />
+                    <div className=" w-full md:w-[30rem] leftToRight  relative text-center flex justify-center flex-col items-center">
+                        <h3 className="text-sm uppercase leading-loose text-gray-400 flex w-fit pb-2">Geological Surveys and Analysis Services</h3>
+                        <h3 className="text-3xl leading-tight font-bold flex w-fit pb-2 mb-5">Expert Geological Analysis</h3>
+                        <p className="text-sm md:text-sm mb-5 text-gray-500">Benefit from our specialized geological surveys and analysis services. Our team of experts provides comprehensive insights to optimize your mining operations.</p>
                     </div>
                 </div>
             </div>
+
         </Container>
     </section>
   )
