@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-5 items-center">
 
           {/* <Link to={''} className=" border-2 border-light text-light w-full md:w-fit px-5 py-2 focus:outline-none rounded-full">Learn More</Link> */}
-          <Link to={''} className="bg-light text-white w-full md:w-fit px-5 py-2 focus:outline-none rounded-full">Contact Us</Link>
+          <Link onClick={() => handleClickScroll("contact")} to={'/'} className="bg-light text-white w-full md:w-fit px-5 py-2 focus:outline-none rounded-full">Contact Us</Link>
         </div>
         <motion.span 
           whileTap={{ scale: 0.85 }}
