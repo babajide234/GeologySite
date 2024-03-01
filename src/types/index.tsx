@@ -12,8 +12,8 @@ export type HeaderType={
 export type Equipment = {
     name: string;
     description: string;
-    price: string;
-    usage: string;
+    price?: string;
+    usage?: string;
     image: string;
     category: string;
   };

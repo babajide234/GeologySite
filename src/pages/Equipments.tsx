@@ -1,5 +1,5 @@
 import {  X } from 'lucide-react'
-import { DRILL, Drone, Equipment, Geo_Ex, ROCK, Vent, XRF } from '../assets'
+import { BallMill, Bulldozer, Centrifuge, ConeCrusher, ConveyorBelt, Crane, DRILL, Drone, DryingOven, DumpTruck, Equipment, Excavator, FilterPress, FlotationCell, Geo_Ex, Grader, ImpactCrusher, JawCrusher, MetalDetector, ROCK, RockDrill, SAGMill, Scraper, Thickener, Vent, WheelLoader, XRF } from '../assets'
 import Container from '../components/Container'
 import React, { useState } from 'react'
 import { Equipment as EquipmentType } from '../types'
@@ -56,8 +56,138 @@ const Equipments = () => {
             "usage": "The Mine Ventilation System is indispensable for underground mining operations. It circulates fresh air throughout the mine, ensuring a safe working environment for miners by removing hazardous gases and preventing the buildup of dust and fumes. This system is vital for maintaining optimal air quality and preventing accidents.",
             "image": Vent,
             "category": "Safety and Operations Equipment"
-          }
-        ]
+          },
+          {
+            "name": "Heavy-Duty Excavator",
+            "description": "Powerful excavator designed for large-scale earthmoving and mining operations.",
+            "price": "$300,000",
+            "usage": "The Heavy-Duty Excavator is built to tackle the toughest jobs in mining and construction. With its robust hydraulic system and high digging force, it can handle heavy materials and excavate large volumes of earth. Whether for open-pit mining or major construction projects, this excavator delivers exceptional performance.",
+            "image": Excavator,
+            "category": "Construction Equipment"
+          },
+          {
+            "name": "Bulldozer",
+            "description": "Versatile bulldozer for pushing, lifting, and moving heavy materials on construction sites.",
+            "price": "$250,000",
+            "usage": "The Bulldozer is a versatile machine used in various construction and mining applications. Its powerful engine and blade make it ideal for clearing land, pushing soil and rocks, and leveling surfaces. Whether for road construction, site preparation, or land reclamation, the bulldozer is a workhorse on the job site.",
+            "image": Bulldozer,
+            "category": "Construction Equipment"
+          },
+          {
+            "name": "Dump Truck",
+            "description": "Large-capacity dump truck for transporting materials such as ore, gravel, and rock.",
+            "price": "$150,000",
+            "usage": "The Dump Truck is essential for transporting large quantities of materials in mining and construction. Its robust design and high load capacity make it ideal for hauling ore, gravel, and rock from excavation sites to processing facilities. With its off-road capabilities, it navigates rough terrain with ease.",
+            "image": DumpTruck,
+            "category": "Transportation Equipment"
+          },
+          {
+            "name": "Crane",
+            "description": "Heavy-duty crane for lifting and moving heavy equipment and materials.",
+            "price": "$400,000",
+            "usage": "The Crane is a crucial piece of equipment for lifting heavy loads in construction and mining operations. With its telescopic boom and lifting capacity, it can hoist and place materials with precision. Whether for erecting structures, assembling machinery, or loading/unloading materials, the crane plays a vital role on the job site.",
+            "image": Crane,
+            "category": "Construction Equipment"
+          },
+          {
+            "name": "Rock Drill",
+            "description": "Specialized rock drill for precise drilling in hard rock formations.",
+            "price": "$80,000",
+            "usage": "The Rock Drill is designed for drilling in hard rock formations encountered in mining and tunneling. Equipped with high-powered hydraulic systems and durable drill bits, it can bore through tough rock with precision. This tool is essential for creating blast holes, anchor holes, and tunneling applications.",
+            "image": RockDrill,
+            "category": "Drilling Equipment"
+          },
+            {
+              "name": "Wheel Loader",
+              "description": "A versatile machine used for loading, transporting, and stockpiling loose materials such as sand, gravel, and coal.",
+              "image": WheelLoader,
+              "category": "Mining Equipment"
+            },
+            {
+              "name": "Grader",
+              "description": "A machine used for leveling, grading, and shaping surfaces on construction and mining sites.",
+              "image": Grader,
+              "category": "Mining Equipment"
+            },
+            {
+              "name": "Scraper",
+              "description": "A self-loading hauling unit used for excavating, transporting, and dumping earth and other loose materials over short distances.",
+              "image": Scraper,
+              "category": "Mining Equipment"
+            },
+            {
+              "name": "Conveyor Belt",
+              "description": "A continuous loop of belt used to transport loose materials over long distances.",
+              "image": ConveyorBelt,
+              "category": "Mining Equipment"
+            },
+            {
+              "name": "Jaw Crusher",
+              "description": "A machine that uses opposing jaws to crush large rocks into smaller pieces.",
+              "image": JawCrusher,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Cone Crusher",
+              "description": "A machine that uses a cone-shaped crushing chamber to reduce the size of rocks.",
+              "image": ConeCrusher,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Impact Crusher",
+              "description": "A machine that uses high-speed impact to break rocks into smaller pieces.",
+              "image": ImpactCrusher,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Ball Mill",
+              "description": "A rotating cylindrical mill that uses grinding balls to grind rocks into a fine powder.",
+              "image": BallMill,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "SAG Mill",
+              "description": "A large, cylindrical mill that uses grinding balls and autogenous material (large rocks) to grind rocks into a fine powder.",
+              "image": SAGMill,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Flotation Cell",
+              "description": "A device that uses air bubbles to separate valuable minerals from waste rock.",
+              "image": FlotationCell,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Thickener",
+              "description": "A tank used to separate solids from liquids in a slurry.",
+              "image": Thickener,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Filter Press",
+              "description": "A machine that uses pressure to separate solids from liquids in a slurry.",
+              "image": FilterPress,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Centrifuge",
+              "description": "A machine that uses centrifugal force to separate solids from liquids in a slurry.",
+              "image": Centrifuge,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Drying Oven",
+              "description": "An oven used to remove moisture from materials.",
+              "image": DryingOven,
+              "category": "Processing Equipment"
+            },
+            {
+              "name": "Metal Detector",
+              "description": "A device that can detect the presence of metal.",
+              "image": MetalDetector,
+              "category": "Exploration Equipment"
+            }
+    ]
       
     const HandleSelect: React.MouseEventHandler<HTMLButtonElement> = (event) => {
       const name = event.currentTarget.getAttribute('data-name');
@@ -73,6 +203,7 @@ const Equipments = () => {
     const handleSubmit:React.MouseEventHandler<HTMLButtonElement>= ()=>{
       setModal(!modal);
     }
+
   return (
     <>
         <section className=" w-full bg-black/60 bg-center bg-blend-overlay bg-cover h-48 md:h-96" style={{ backgroundImage:`url(${Equipment})` }}>
@@ -110,7 +241,7 @@ const Equipments = () => {
         {
           modal && 
 
-          <div className=" fixed w-full h-screen bg-black/30 flex justify-center items-center top-0 left-0">
+          <div className=" z-50 fixed w-full h-screen bg-black/30 flex justify-center items-center top-0 left-0">
             <div className=" w-11/12 md:w-1/2 min-h-1/2 bg-white rounded-xl px-10 py-12 relative">
               <div className="mb-10">
                 <h3 className=" font-semibold text-xl md:text-2xl ">Request a Quote </h3>

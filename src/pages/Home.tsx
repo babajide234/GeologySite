@@ -3,7 +3,7 @@ import About from '../components/About'
 import Team from '../components/Team'
 import Contact from '../components/Contact'
 import Cta from '../components/CTA'
-import Quote from '../components/Quote'
+// import Quote from '../components/Quote'
 import Services from '../components/Services'
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
           <About/>
           <Cta/>
           <Services/>
-          <Quote/>
+          {/* <Quote/> */}
           <Team/>
           <Contact/>
     </>

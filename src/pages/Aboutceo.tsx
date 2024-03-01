@@ -34,11 +34,11 @@ const Aboutceo = () => {
                     </div>
                     <div className=" flex flex-col md:flex-row items-center gap-10 ">
                         <div className="md:w-1/2 w-full bg-cover bg-center bg-black/40 bg-blend-overlay overflow-hidden rounded-lg h-[10rem] md:h-[20rem] flex items-center justify-center" style={{backgroundImage:`url(${Survey})`}}>
-                            <h3 className=" text-center text-white text-2xl md:text-3xl  uppercase leading-loose">Gold Investing</h3>
+                            <h3 className=" text-center text-white text-2xl md:text-3xl  uppercase leading-loose">Gold & Diamond Investing</h3>
                         </div>
                         <div className=" md:w-1/2 w-full">
                             <p className=" text-sm md:text-lg mb-5 text-gray-500 text-left">
-                            Investing in gold has long been a cornerstone of wealth preservation and growth. At BRC Geologist Limited, we provide a specialized avenue for gold investment, leveraging our expertise in geological analysis to identify promising opportunities in gold mining and exploration. Whether you're a seasoned investor or new to the world of gold, our platform offers a range of investment options tailored to your preferences and risk profile.                            </p>
+                            Investing in Gold & Diamond has long been a cornerstone of wealth preservation and growth. At BRC Geologist Limited, we provide a specialized avenue for Gold & Diamond investment, leveraging our expertise in geological analysis to identify promising opportunities in Gold & Diamond mining and exploration. Whether you're a seasoned investor or new to the world of Gold & Diamond, our platform offers a range of investment options tailored to your preferences and risk profile.                            </p>
                         </div>
                     </div>
                     <div className=" flex flex-col md:flex-row items-center gap-10 ">

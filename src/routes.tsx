@@ -3,6 +3,11 @@ import Home from "./pages/Home";
 import Layout from "./Layout";
 import Equipments from "./pages/Equipments";
 import Aboutceo from "./pages/Aboutceo";
+import Services from "./pages/Services";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Faqs from "./pages/Faqs";
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +25,26 @@ const router = createBrowserRouter([
         {
           path:"/about-ceo",
           element:<Aboutceo/>
+        },
+        {
+          path:"/services",
+          element:<Services/>
+        },
+        {
+          path:"/terms",
+          element:<Terms/>
+        },
+        {
+          path:"/privacy",
+          element:<Privacy/>
+        },
+        {
+          path:"/faqs",
+          element:<Faqs/>
+        },
+        {
+          path:"/contact",
+          element:<Contact/>
         },
       ]
     },

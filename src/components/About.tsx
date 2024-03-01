@@ -1,36 +1,14 @@
 import Container from './Container'
 import { IMG1 } from '../assets'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useGSAP } from '@gsap/react'
+// import gsap from 'gsap'
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 
 const About = () => {
-    useGSAP(()=>{
-        gsap.registerPlugin(ScrollTrigger) 
-
-        // gsap.from(".leftToRight",{
-        //     scrollTrigger:{
-        //         trigger:"section",
-        //         toggleActions:'play none none none',
-        //     },
-        //     once:true,
-        //     x:-100,
-        //     opacity:0,
-        //     duration:2,
-        // })
-        // gsap.from(".RightToLeft",{
-        //     scrollTrigger:{
-        //         trigger:"section",
-        //         toggleActions:'play none none none',
-        //     },
-        //     x:100,
-        //     opacity:0,
-        //     duration:2
-        // })
-    })
+    
   return (
     <section id='about' className=" mt-[17rem] md:mt-0 py-10 md:py-20 ">
         <Container>

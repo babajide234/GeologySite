@@ -1,8 +1,47 @@
+import { useState } from 'react';
 import Container from './Container'
 import { SocialIcon } from 'react-social-icons'
-
+import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 const Footer = () => {
-  return (
+    const year = new Date().getFullYear();
+    const [email, setEmail] = useState("");
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    };
+    
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+    
+        // Replace this commented section with your actual subscription logic
+        // It should handle sending the email address to your backend for subscription
+    
+        // try {
+        //   const response = await fetch("/api/subscribe", {
+        //     method: "POST",
+        //     body: JSON.stringify({ email }),
+        //     headers: { "Content-Type": "application/json" },
+        //   });
+    
+        //   if (response.ok) {
+        //     toast.success("Successfully subscribed!");
+        //     setEmail(""); // Clear the email input after successful subscription
+        //   } else {
+        //     toast.error("Subscription failed. Please try again later.");
+        //   }
+        // } catch (error) {
+        //   toast.error("An error occurred. Please try again later.");
+        // }
+    
+        // Example Toast Usage (comment out the above commented section if using real logic)
+        toast.success("");
+    
+        // Remember to replace the example toast notification with your success/error messages based on your actual subscription logic
+    };
+
+    return (
     <footer className=" bg-gray-50">
         <Container>
             <div className=" flex flex-col w-full">
@@ -14,42 +53,59 @@ const Footer = () => {
                         <div className="flex flex-col gap-5">
                             <h3 className=" font-semibold text-base">About Us</h3>
                             <ul className=" flex flex-col gap-2">
-                                <li className=" text-sm capitalize ">Services</li>
-                                <li className=" text-sm capitalize ">Contact Us</li>
-                                <li className=" text-sm capitalize ">FAQS</li>
-                            </ul>
-                        </div>
-                        <div className="flex flex-col gap-5">
-                            <h3 className=" font-semibold text-base">Partners</h3>
-                            <ul className=" flex flex-col gap-2">
-                                <li className=" text-sm capitalize ">Investors</li>
-                                <li className=" text-sm capitalize ">Careers</li>
-                                <li className=" text-sm capitalize ">Resources</li>
+                                <li className=" text-sm capitalize hover:cursor-pointer "> 
+                                    <ScrollLink 
+                                        to="services" 
+                                        smooth={true} 
+                                        duration={500}
+                                    >Services</ScrollLink> 
+                                </li>
+                                <li className=" text-sm capitalize hover:cursor-pointer ">
+                                    <ScrollLink 
+                                        to="contact" 
+                                        smooth={true} 
+                                        duration={500}
+                                    >Contact Us</ScrollLink> 
+                                </li>
                             </ul>
                         </div>
                         <div className="flex flex-col gap-5">
                             <h3 className=" font-semibold text-base">Support</h3>
                             <ul className=" flex flex-col gap-2">
-                                <li className=" text-sm capitalize ">terms</li>
-                                <li className=" text-sm capitalize ">privacy</li>
-                                <li className=" text-sm capitalize ">cookies</li>
+                                <li className=" text-sm capitalize "><Link to={'/terms'}>terms</Link> </li>
+                                <li className=" text-sm capitalize "><Link to={'/privacy'}>privacy</Link> </li>
                             </ul>
                         </div>
                     </div>
+                    <form onSubmit={handleSubmit}>
+
                     <div className=" md:w-[30rem] flex flex-col gap-5 w-full">
                         <h3 className="">Subscribe For Newsletter</h3>
                         <label htmlFor='emailNewsletter' className=" w-full md:w-[30rem] flex  border focus-within:border-gray-600 border-gray-200 rounded overflow-hidden">
                             <span className="sr-only">email</span>
-                            <input type="text" name='emailNewsletter' id='emailNewsletter' className=" flex-grow h-full border-none outline-none p-2.5" placeholder='Enter email address' />
+                            <input
+                                type="text"
+                                name="emailNewsletter"
+                                id="emailNewsletter"
+                                className="flex-grow h-full border-none outline-none p-2.5"
+                                placeholder="Enter email address"
+                                value={email}
+                                onChange={handleInputChange}
+                            />
                         </label>
-                        <button className=" bg-black px-4 py-2.5 text-base font-semibold  text-white rounded">Subscribe</button>
+                        <button
+                            className="bg-black px-4 py-2.5 text-base font-semibold text-white rounded"
+                            type='submit'
+                        >
+                            Subscribe
+                        </button>
                     </div>
+                    </form>
                 </div>
                 <div className=" py-20 flex justify-between">
                     <div className="">
                         <ul className="flex gap-5">
-                            <li className=" capitalize text-sm ">Terms of Service</li>
-                            <li className=" capitalize text-sm underline">Cookies settings</li>
+                            <li className="capitalize text-sm">© BMC Ltd {year}</li>
                         </ul>
                     </div>
                     <div className="">
