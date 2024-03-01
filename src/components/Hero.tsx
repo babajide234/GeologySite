@@ -47,13 +47,13 @@ const Hero = () => {
   return (
     <div className="  w-full md:bg-black/20  bg-blend-overlay px-5 md:px-10 md:mb-[20rem] flex items-center justify-center h-screen md:h-screen relative ">
         <video src={Video} autoPlay loop muted className='  md:flex object-cover  absolute w-full h-full top-0 left-0'/>
-        <div className=" w-[700px]  flex justify-center flex-col gap-10 items-center">
+        <div className=" z-20 w-[700px]  flex justify-center flex-col gap-10 items-center">
             <h1 className="header text-white  text-[35px]  md:text-[75px] text-center leading-none font-bold ">
               Explore the Depths of Geology
             </h1>
             <p className="subtext text-white text-center text-base md:text-xl">Uncover the Earth's secrets and shape the future of our planet.</p>
             
-            <div className=" w-full md:w-fit flex flex-col md:flex-row  gap-2 md:gap-5">
+            <div className="btncontainer w-full md:w-fit flex flex-col md:flex-row  gap-2 md:gap-5">
                 <ScrollLink 
                   to="about" 
                   smooth={true} 
