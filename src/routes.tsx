@@ -8,6 +8,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Faqs from "./pages/Faqs";
 import Contact from "./pages/Contact";
+import CeoPage from "./pages/CeoPage";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         {
           path:"/about-ceo",
           element:<Aboutceo/>
+        },
+        {
+          path:"/ceo",
+          element:<CeoPage/>
         },
         {
           path:"/services",

@@ -7,6 +7,7 @@ import IMG6 from './img6.jpg';
 import IMG7 from './img7.jpg';
 import IMG8 from './img8.jpg';
 import CEO from './ceo.jpeg';
+import CFO from './cfo.jpeg';
 import Gold from './gold.jpg';
 import Micheal from './Michael.jpg';
 import Emily from './emily.jpg';
@@ -30,18 +31,26 @@ import RockDrill from './Cover-Shot_HCR1100_new-bkgrd-scaled.jpg';
 import WheelLoader from './images (13).jpg';
 import Grader from './images (12).jpg';
 import Scraper from './images (11).jpg';
-import ConveyorBelt from './images (10).jpg';
 import JawCrusher from './images (9).jpg';
 import ConeCrusher from './images (8).jpg';
 import ImpactCrusher from './images (7).jpg';
-import BallMill from './images (6).jpg';
 import SAGMill from './images (5).jpg';
-import FlotationCell from './images (4).jpg';
-import Thickener from './images (3).jpg';
 import FilterPress from './images (2).jpg';
 import Centrifuge from './images (1).jpg';
 import DryingOven from './images.jpg';
 import MetalDetector from './imagesww.jpg';
+import Logo from './logo.png';
+import XSM from './x.png';
+import L from './L.png';
+import F from './f.png';
+import E from './22.jpeg';
+import Dim from './diamond.jpg';
+import Sur from './sur.jpeg';
+import Gol from './gold3.jpg';
+import ConveyorBelt from './Conveyor Belt.webp';
+import FlotationCell from './Flotation Cell.jpg';
+import BallMill from './ball-mill-500x500.webp';
+import Thickener from './Metso-HRT-S-thickener.jpg';
 
 
 export {
@@ -54,6 +63,7 @@ export {
     IMG7,
     IMG8,
     CEO,
+    CFO,
     Equipment,
     Gold,
     Survey,
@@ -88,5 +98,14 @@ export {
     FilterPress,
     Centrifuge,
     DryingOven,
-    MetalDetector
+    MetalDetector,
+    Logo,
+    XSM,
+    L,
+    F,
+    E,
+    Dim,
+    Sur,
+    Gol,
+
 } 

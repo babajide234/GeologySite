@@ -4,6 +4,7 @@ import { CgClose } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { Logo } from "../assets";
 const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,9 +48,12 @@ const Navbar = () => {
       };
     }, []);
   return (
-    <div className={`${scrolled ? 'bg-purple-500 shadow-lg ' : ''} transition-all ease-in-out duration-300 w-full fixed flex items-center justify-between top-0 left-0 z-10  px-5 h-20 md:px-10 md:h-20 `}>
+    <div className={`${scrolled ? 'bg-purple-500 shadow-lg ' : ''} transition-all ease-in-out duration-300 w-full fixed flex items-center justify-between top-0 left-0 z-30  px-5 h-20 md:px-10 md:h-20 `}>
         <nav className=" flex items-center gap-10 h-full">
-          <h2 className=' font-bold text-2xl md:text-3xl text-white'>Logo</h2>
+          {/* <h2 className=' font-bold text-2xl md:text-3xl text-white'>Logo</h2> */}
+          <div className={` bg-white rounded-lg`}>
+            <img src={Logo} alt="" className=" w-[5rem] " />
+          </div>
           <ul className=" items-center h-full hidden md:flex">
             
             <motion.li onClick={() => handleClickScroll("")} whileTap={{ scale: 0.86 }} className="  outline-none capitalize text-sm text-white px-2.5 h-full flex items-center  hover:bg-purple-600">
@@ -57,6 +61,9 @@ const Navbar = () => {
             </motion.li>
             <motion.li onClick={() => handleClickScroll("about")} whileTap={{ scale: 0.86 }} className=" cursor-pointer  outline-none capitalize text-sm text-white px-2.5 h-full flex items-center  hover:bg-purple-600">
               <ScrollLink to="about" smooth={true} duration={500} >About Us</ScrollLink> 
+            </motion.li>
+            <motion.li  whileTap={{ scale: 0.86 }} className=" cursor-pointer  outline-none capitalize text-sm text-white px-2.5 h-full flex items-center  hover:bg-purple-600">
+              <Link to={'/ceo'} >About CEO</Link> 
             </motion.li>
             <motion.li onClick={() => handleClickScroll("services")} whileTap={{ scale: 0.86 }} className=" cursor-pointer  outline-none capitalize text-sm text-white px-2.5 h-full flex items-center  hover:bg-purple-600">
               <ScrollLink to="services" smooth={true} duration={500}  >Services</ScrollLink>
@@ -97,6 +104,7 @@ const Navbar = () => {
                 <ul className=" flex flex-col gap-5">
                   <motion.li onClick={() => mobileHandleClickScroll("")} whileTap={{ scale: 0.86 }} className=" text-3xl  font-bold "><Link to={'/'} >Home</Link></motion.li>
                   <motion.li onClick={() => mobileHandleClickScroll("about")} whileTap={{ scale: 0.86 }} className=" text-3xl  font-bold "><Link to={'/'} >About Us</Link> </motion.li>
+                  <motion.li onClick={() => mobileHandleClickScroll("")} whileTap={{ scale: 0.86 }} className=" text-3xl  font-bold "><Link to={'/ceo'} >About CEO</Link> </motion.li>
                   <motion.li onClick={() => mobileHandleClickScroll("services")} whileTap={{ scale: 0.86 }} className=" text-3xl  font-bold "><Link to={'/'} >Services</Link></motion.li>
                   <motion.li onClick={() => mobileHandleClickScroll("")} whileTap={{ scale: 0.86 }} className="  text-3xl  font-bold "><Link to={'/equipment'} >Equipments</Link></motion.li>
                   <motion.li onClick={() => mobileHandleClickScroll("contact")} whileTap={{ scale: 0.86 }} className=" text-3xl  font-bold "><Link to={'/'} >Contact</Link></motion.li>

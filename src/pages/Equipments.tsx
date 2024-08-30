@@ -1,5 +1,5 @@
 import {  X } from 'lucide-react'
-import { BallMill, Bulldozer, Centrifuge, ConeCrusher, ConveyorBelt, Crane, DRILL, Drone, DryingOven, DumpTruck, Equipment, Excavator, FilterPress, FlotationCell, Geo_Ex, Grader, ImpactCrusher, JawCrusher, MetalDetector, ROCK, RockDrill, SAGMill, Scraper, Thickener, Vent, WheelLoader, XRF } from '../assets'
+import { BallMill, Bulldozer, Centrifuge, ConeCrusher, ConveyorBelt, Crane, DRILL, Drone, DryingOven, DumpTruck, Equipment, Excavator, FilterPress, FlotationCell, Geo_Ex, Grader, ImpactCrusher, JawCrusher, MetalDetector, ROCK, RockDrill, SAGMill, Scraper, Thickener, Vent, WheelLoader, XRF, } from '../assets'
 import Container from '../components/Container'
 import React, { useState } from 'react'
 import { Equipment as EquipmentType } from '../types'
@@ -216,9 +216,10 @@ const Equipments = () => {
         <section className=" min-h-[50vh] py-10 ">
             <Container>
             <div className="w-full text-center flex flex-col items-center md:px-20 gap-5 md:gap-10 py-10">
-                    <h3 className="md:text-3xl text-xl uppercase leading-loose text-black flex w-fit pb-2">Buy or purchase Geological Equipments</h3>
+                    <h3 className="md:text-3xl text-xl uppercase leading-loose text-black flex w-fit pb-2">Lease or purchase Geological Equipments</h3>
                     <p className="text-sm md:text-lg mb-5 text-gray-500">
-                    At BRC Geologist Limited, we provide a seamless experience for acquiring top-quality geological equipment. Whether you're looking to purchase or lease, we offer a diverse range of tools tailored to meet the demands of various exploration and mining projects.                    </p>
+                      At BRC Geologist Limited, we provide a seamless experience for acquiring top-quality geological equipment. Whether you're looking to purchase or lease, we offer a diverse range of tools tailored to meet the demands of various exploration and mining projects.
+                    </p>
                     </div>
                     <div className=" grid grid-cols-1 gap-2  md:grid-cols-3 md:gap-10">
                         {

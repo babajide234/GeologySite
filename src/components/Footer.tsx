@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Container from './Container'
-import { SocialIcon } from 'react-social-icons'
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import { F, L, Logo, XSM } from '../assets';
 const Footer = () => {
     const year = new Date().getFullYear();
     const [email, setEmail] = useState("");
@@ -47,7 +47,8 @@ const Footer = () => {
             <div className=" flex flex-col w-full">
                 <div className="w-full flex flex-col md:flex-row gap-10 justify-between items-start border-b py-10 md:py-20">
                     <div className="">
-                        <h2 className=' font-bold text-3xl text-black'>Logo</h2>
+                        {/* <h2 className=' font-bold text-3xl text-black'>Logo</h2> */}
+                        <img src={Logo} alt="" className=" w-[9rem]" />
                     </div>
                     <div className="flex items-start justify-between gap-10">
                         <div className="flex flex-col gap-5">
@@ -105,14 +106,15 @@ const Footer = () => {
                 <div className=" py-20 flex justify-between">
                     <div className="">
                         <ul className="flex gap-5">
-                            <li className="capitalize text-sm">© BMC Ltd {year}</li>
+                            <li className="capitalize text-sm">© BRCGEOLOGISTICS LMT {year}</li>
                         </ul>
                     </div>
                     <div className="">
                         <ul className="flex gap-3">
-                            <li className=" w-5 h-5 "><SocialIcon url="https://x.com" style={{ height: 25, width: 25 }}/></li>
-                            <li className=" w-5 h-5 "><SocialIcon url="https://www.linkedin.com/" style={{ height: 25, width: 25 }}/></li>
-                            <li className=" w-5 h-5 "><SocialIcon url="https://facebook.com" style={{ height: 25, width: 25 }}/></li>
+                            <li className=" w-5 h-5 "><img src={XSM} alt="" className="" /></li>
+                            <li className=" w-5 h-5 "><img src={L} alt="" className="" /></li>
+                            <li className=" w-5 h-5 "><img src={F} alt="" className="" /></li>
+                          
                         </ul>
                     </div>
                 </div>

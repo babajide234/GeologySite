@@ -45,7 +45,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="  w-full md:bg-black/20  bg-blend-overlay px-5 md:px-10 md:mb-[20rem] flex items-center justify-center h-screen md:h-screen relative ">
+    <div className="  w-full md:bg-black/20  bg-blend-overlay px-5 md:px-10  flex items-center justify-center h-screen md:h-screen relative ">
         <video src={Video} autoPlay loop muted className='  md:flex object-cover  absolute w-full h-full top-0 left-0'/>
         <div className=" z-20 w-[700px]  flex justify-center flex-col gap-10 items-center">
             <h1 className="header text-white  text-[35px]  md:text-[75px] text-center leading-none font-bold ">

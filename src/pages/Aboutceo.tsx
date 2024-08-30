@@ -82,7 +82,7 @@ const Aboutceo = () => {
                             Ready to learn more? Get in touch with us today to explore how BRC Geologist Limited can help you achieve your investment goals.
                         </p>
                         <ul className="">
-                            <li className="">Phone: 555-123-4567</li>
+                            <li className="">Phone: +1 510-224-2927 ,+1 510-221-6883</li>
                             <li className="">Email: info@brcgeologist.com</li>
                             <li className="">Website: www.brcgeologist.com</li>
                         </ul>
